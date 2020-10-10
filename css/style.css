@@ -85,7 +85,7 @@ ul {
 }
 
 .logo{
-    padding-top: 178px;
+    padding-top: 17vh;
 }
 
 .about__inner {
@@ -99,11 +99,13 @@ ul {
 }
 
 .about__info-item {
+    font-weight: bold;
     margin-bottom: 25px;
     color: #E5E5E5;
 }
 
 .about__info-item span {
+    font-weight: normal;
     display: block;
 }
 
@@ -126,7 +128,7 @@ ul {
     font-size: 72px;
     line-height: 84px;
     color: #85CCDC;
-    padding-top: 444px;
+    padding-top: 45vh;
     margin-bottom: 40px;
 }
 
@@ -187,6 +189,11 @@ ul {
     left: 0;
     top: -72px;
     z-index: -1;
+}
+
+.seasons__item:nth-child(n+10)::before {
+    content: counter(value);
+
 }
 
 .seasons__item:hover::after {
@@ -314,3 +321,99 @@ ul {
 }
 
 /* end season-1 */
+
+
+/* start Media */
+
+@media (max-width: 1366px) {
+    .logo__img {
+        width: 50%;
+    }
+
+    .menu__list-link {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .about__info {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about__inner {
+        display: block;
+    }
+
+    .section-page {
+        padding: 50px 0;
+    }
+
+    .title {
+        margin-bottom: 50px;
+    }
+    
+    body {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .video__text {
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    .video__text span {
+        padding-right: 200px;
+    }
+
+    .video__btn {
+        margin-right: 0;
+        padding-left: 62px;
+    }
+    
+    .video__btn::before {
+        width: 50px;
+        height: 50px;
+        background-size: cover;
+        top: -16px;
+    }
+}
+
+@media (max-width: 690px) {
+    .menu__list {
+        display: none;
+    }
+
+    .logo {
+        padding-top: 21vh;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .logo__img {
+        width: 65%;
+    }
+
+    .video__text span {
+        padding-right: 20px;
+    }
+
+    .section-page {
+        padding: 25px 0;
+    }
+
+    .title {
+        margin-bottom: 25px;
+    }
+
+    .about__text p {
+        margin-bottom: 15px;
+    }
+
+
+}
+
+/* end Media */
